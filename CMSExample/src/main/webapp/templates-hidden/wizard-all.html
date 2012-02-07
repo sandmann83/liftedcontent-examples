@@ -1,0 +1,64 @@
+<div>
+	<wizard:wizard_top>
+		<div>
+			<wizard:bind></wizard:bind>
+		</div>
+	</wizard:wizard_top>
+	<wizard:screen_top>
+		<div>
+			<wizard:bind></wizard:bind>
+		</div>
+	</wizard:screen_top>
+	<div>
+		<wizard:fields>
+			<table>
+				<tbody>
+					<tr lift:bind="wizard:line">
+						<td><wizard:label>
+								<label wizard:for="" class="ui-hidden-accessible"> <wizard:bind></wizard:bind>
+								</label>
+							</wizard:label> <wizard:help>
+								<span> <wizard:bind></wizard:bind>
+								</span>
+							</wizard:help></td>
+						<td><wizard:form wizard:placeholder=""></wizard:form></td>
+						<td><wizard:field_errors>
+								<ul class="validationMessages">
+									<wizard:error>
+										<li><wizard:bind></wizard:bind></li>
+									</wizard:error>
+								</ul>
+							</wizard:field_errors></td>
+					</tr>
+				</tbody>
+			</table>
+		</wizard:fields>
+	</div>
+	<div>
+		<table>
+			<tr>
+				<td><wizard:prev></wizard:prev></td>
+				<td><wizard:cancel></wizard:cancel></td>
+				<td><wizard:next></wizard:next></td>
+			</tr>
+		</table>
+	</div>
+	<wizard:screen_bottom>
+		<div>
+			<wizard:bind></wizard:bind>
+		</div>
+	</wizard:screen_bottom>
+	<wizard:wizard_bottom>
+		<div>
+			<wizard:bind></wizard:bind>
+		</div>
+	</wizard:wizard_bottom>
+	<wizard:screen_info>
+		<div style="width: 100%; text-align: right">
+			Page
+			<wizard:screen_number></wizard:screen_number>
+			of
+			<wizard:total_screens></wizard:total_screens>
+		</div>
+	</wizard:screen_info>
+</div>

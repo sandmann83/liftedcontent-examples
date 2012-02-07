@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title data-lift="Menu.title"></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+<!-- Le styles -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/default.css" rel="stylesheet">
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72"
+	href="/images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114"
+	href="/images/apple-touch-icon-114x114.png">
+</head>
+
+<body>
+
+	<!-- Navbar
+    ================================================== -->
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid" data-lift="SetupInformation">
+				<a class="btn btn-navbar" data-toggle="collapse"
+					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span>
+				</a> <a class="brand" href="/"> <span data-lift-id="title"></span>
+				</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li><a href="/blog/latest"><i
+								class="icon-book icon-white"></i> <span
+								data-lift="Loc.LATEST_POST"></span></a></li>
+						<li><a href="/blog/archive"><i
+								class="icon-folder-open icon-white"></i> <span
+								data-lift="Loc.ARCHIVE"></span></a>
+					</ul>
+					<form data-lift="Form.ajax?class=navbar-search pull-right">
+						<div data-lift="SearchBlogPost">
+							<div data-lift-id="datalist"></div>
+							<input name="search"
+								class="search-query" type="search"></input>
+							<button type="submit" class="btn btn-small btn-primary" style="position: relative; top: -3px">
+								<i class="icon-search icon-white"></i>
+							</button>
+						</div>
+					</form>
+					<ul class="nav pull-right">
+						<li><a href="/contact"><i
+								class="icon-envelope icon-white"></i> <span
+								data-lift="Loc.CONTACT"></span></a></li>
+
+						<li><a data-lift="TestCond.loggedIn" href="/user_mgt/logout"><i
+								class="icon-user icon-white"></i> <span data-lift="Loc.LOGOUT"></span></a>
+							<a data-lift="TestCond.loggedOut" href="/user_mgt/login"><i
+								class="icon-user icon-white"></i> <span data-lift="Loc.LOGIN"></span></a></li>
+
+						<li><a data-lift="TestCond.loggedOut"
+							href="/user_mgt/sign_up"> <i class="icon-pencil icon-white"></i>
+								<span data-lift="Loc.REGISTER"></span>
+						</a> <a data-lift="TestCond.loggedIn" href="/user_mgt/edit"> <i
+								class="icon-edit icon-white"></i> <span
+								data-lift="Loc.EDIT_PROFILE"></span>
+						</a></li>
+
+						<li data-lift="TestCondition.isAdmin"><a href="/admin/">
+								<i class="icon-cog icon-white"></i> <span data-lift="Loc.ADMIN"></span>
+						</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container-fluid">
+
+		<div class="row-fluid">
+
+			<div class="span3">
+
+				<div class="well sidebar-nav" data-lift="TestCondition.isAdmin">
+					<ul class="nav nav-list">
+						<li><a href="/blog/post"><i class="icon-pencil"></i> <span
+								data-lift="Loc.POST_BLOG_ENTRY"></span></a></li>
+					</ul>
+				</div>
+
+				<div class="well sidebar-nav">
+					<ul data-lift="BlogArchive?months=1" class="nav nav-list">
+						<li data-lift-id="header" class="nav-header"></li>
+						<li data-lift-id="item"></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="span9">
+				<div class="well">
+					<div id="content">Content</div>
+				</div>
+			</div>
+		</div>
+
+		<hr />
+
+		<footer>
+			<p>&copy; Stefan Bradl 2012</p>
+
+			<div data-lift="Msgs"></div>
+		</footer>
+
+	</div>
+	<!-- /container -->
+
+	<!-- Le javascript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+
+</body>
+</html>

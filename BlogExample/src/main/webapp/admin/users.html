@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body class="lift:content_id=main">
+	<div id="main" data-lift="TemplateSelector">
+		<article>
+			<header>
+				<h1>
+					<span data-lift="Loc.USER_SETTINGS"></span>
+				</h1>
+			</header>
+
+			<form data-lift="Form.ajax">
+				<div data-lift="ListUsers">
+					<table>
+						<thead>
+							<tr>
+								<td><span data-lift="Loc.EMAIL"></span></td>
+								<td><span data-lift="Loc.FIRSTNAME"></span></td>
+								<td><span data-lift="Loc.LASTNAME"></span></td>
+								<td><span data-lift="Loc.ACTIVE"></span>?</td>
+								<td></td>
+							</tr>
+						</thead>
+						<tr data-lift-id="userdata">
+							<td data-lift-id="email">Email</td>
+							<td data-lift-id="firstname">Firstname</td>
+							<td data-lift-id="lastname">Lastname</td>
+							<td data-lift-id="status">Status</td>
+							<td>
+								<a data-lift-id="roles"><img src="/images/backend/manage_groups.png" /></a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</form>
+		</article>
+	</div>
+</body>
+</html>
+

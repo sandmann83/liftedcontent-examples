@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body class="lift:content_id=main">
+	<div id="main" data-lift="TemplateSelector">
+		<article>
+			<header>
+				<h1>
+					<span data-lift="Loc.GROUP_SETTINGS"></span>
+				</h1>
+			</header>
+
+			<div data-lift="Comet?type=Roles">
+				<table>
+					<tr data-lift-id="roledata">
+						<td data-lift-id="name">Role name</td>
+						<td><a data-lift-id="delete" class="btn btn-danger"><i class="icon-trash icon-white"></i></a></td>
+					</tr>
+				</table>
+			</div>
+		</article>
+
+		<hr />
+
+		<article>
+			<header>
+				<h1>
+					<span class="lift:Loc.ADD_ROLE"></span>
+				</h1>
+			</header>
+
+			<form data-lift="Form.ajax">
+				<div data-lift="AddRole">
+					<input name="name" /> <input name="submit" class="btn btn-success" />
+				</div>
+			</form>
+		</article>
+	</div>
+</body>
+</html>
+

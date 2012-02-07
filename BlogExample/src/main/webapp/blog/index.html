@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body class="lift:content_id=main">
+	<div id="main" class="lift:TemplateSelector">
+		<div class="lift:BlogPosts">
+			<article data-name="blogpost" class="blog">
+				<header>
+					<h1>
+						<span data-name="title"></span> <span class="lift:Loc.FROM"></span> <span data-name="author"></span>
+					</h1>
+					<div data-name="manage">
+						<small> <span data-name="status">Status</span> - [<span data-name="edit"></span>] [<span
+							data-name="delete"></span>]
+						</small>
+					</div>
+				</header>
+				<span data-name="text"></span>
+				<footer>
+					<span class="lift:Loc.TRANSLATED_BY"></span> <span data-name="translator"></span> - <span
+						class="lift:Loc.CREATED_AT"></span>: <span data-name="createdAt"></span> - <span
+						class="lift:Loc.UPDATED_AT"></span>: <span data-name="updatedAt"></span>
+
+					<details data-name="comments">
+						<summary>
+							<span data-name="summary"></span>
+						</summary>
+						<p>
+							<a data-name="commentUrl"><span data-name="commentLinkText"></span></a>
+						</p>
+						<article data-name="comment" class="blog_comment">
+							<h1>
+								<span data-name="author"></span> - <span data-name="createdAt"></span>
+							</h1>
+							<p data-name="text"></p>
+						</article>
+					</details>
+				</footer>
+				<hr />
+			</article>
+		</div>
+	</div>
+</body>
+</html>
+

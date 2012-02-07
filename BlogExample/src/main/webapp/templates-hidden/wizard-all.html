@@ -1,0 +1,63 @@
+<div>
+	<wizard:wizard_top>
+		<div>
+			<wizard:bind></wizard:bind>
+		</div>
+	</wizard:wizard_top>
+	<wizard:screen_top>
+		<div>
+			<wizard:bind></wizard:bind>
+		</div>
+	</wizard:screen_top>
+	<div>
+		<wizard:fields>
+			<div lift:bind="wizard:line" class="row-fluid">
+				<div class="span2">
+					<wizard:label>
+						<label wizard:for=""> <wizard:bind></wizard:bind>
+						</label>
+						<wizard:help>
+							<span> <wizard:bind></wizard:bind>
+							</span>
+						</wizard:help>
+					</wizard:label>
+				</div>
+				<div class="span6">
+					<wizard:form></wizard:form>
+				</div>
+				<div class="span1">
+					<wizard:field_errors>
+						<ul class="validationMessages">
+							<wizard:error>
+								<li><wizard:bind></wizard:bind></li>
+							</wizard:error>
+						</ul>
+					</wizard:field_errors>
+				</div>
+			</div>
+		</wizard:fields>
+	</div>
+	<div>
+		<wizard:prev></wizard:prev>
+		<wizard:cancel></wizard:cancel>
+		<wizard:next></wizard:next>
+	</div>
+	<wizard:screen_bottom>
+		<div>
+			<wizard:bind></wizard:bind>
+		</div>
+	</wizard:screen_bottom>
+	<wizard:wizard_bottom>
+		<div>
+			<wizard:bind></wizard:bind>
+		</div>
+	</wizard:wizard_bottom>
+	<wizard:screen_info>
+		<div style="width: 100%; text-align: right">
+			Page
+			<wizard:screen_number></wizard:screen_number>
+			of
+			<wizard:total_screens></wizard:total_screens>
+		</div>
+	</wizard:screen_info>
+</div>

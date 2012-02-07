@@ -1,0 +1,12 @@
+article {
+	margin-top: 16px;
+	margin-bottom: 0px;
+}
+
+#lift__noticesContainer__ {
+	position: fixed;
+	bottom: 0%;
+	padding: 0px;
+	margin: 0px;
+}
+

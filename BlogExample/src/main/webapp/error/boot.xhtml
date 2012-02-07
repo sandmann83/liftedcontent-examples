@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+</head>
+<body class="lift:content_id=main">
+	<div id="main" class="lift:surround?with=error;at=content">
+		<h2>Booting failed</h2>
+		<div class="lift:LastError.show">
+			<h3>
+				<error:title />
+			</h3>
+			<p>
+				<error:message />
+			</p>
+			<hr />
+			<p>
+				<error:stacktrace />
+			</p>
+		</div>
+	</div>
+</body>
+</html>
+

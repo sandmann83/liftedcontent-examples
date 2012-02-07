@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body class="lift:content_id=main">
+	<div id="main" data-lift="TemplateSelector">
+
+		<article data-lift="BlogPost">
+			<header>
+				<h1>
+					<span data-lift-id="title"></span> <small data-lift-id="createdAt"
+						class="pull-right"></small>
+				</h1>
+
+			</header>
+			<p data-lift-id="text"></p>
+
+			<hr />
+			<footer>
+
+
+				<div data-lift-id="comments">
+					<span data-lift-id="manage">
+						<a class="btn btn-primary" data-lift-id="edit"
+							data-lift="IsAllowed?url=blog/edit">
+							<i class="icon-edit icon-white"></i> <span
+							data-lift="Loc.EDIT"></span>
+						</a> <a class="btn btn-danger" data-lift-id="delete"
+							data-lift="IsAllowed?url=blog/delete">
+							<i class="icon-trash icon-white"></i> <span
+							data-lift="Loc.DELETE"></span>
+						</a>
+					</span>
+
+					<a class="btn btn-info" data-toggle="collapse"
+						data-target="#comments">
+						<span data-lift-id="summary"></span> <i class="icon-comment icon-white"></i>
+					</a>
+
+					<div id="comments" class="collapse out">
+						<article data-lift-id="comment" class="well">
+							<strong> <span data-lift-id="author"></span> - <span
+								data-lift-id="createdAt"></span>
+							</strong>
+							<p data-lift-id="text"></p>
+						</article>
+
+						<article data-lift="TestCond.loggedIn">
+							<form data-lift="Form.ajax">
+								<div data-lift="CommentBlogPost">
+									<input name="comment" /><br />
+									<button type="submit" class="btn btn-success">
+									<i class="icon-share icon-white"></i>
+										<span data-lift="Loc.WRITE_COMMENT"></span>
+									</button>
+								</div>
+							</form>
+						</article>
+
+					</div>
+				</div>
+
+			</footer>
+		</article>
+	</div>
+</body>
+</html>
+
