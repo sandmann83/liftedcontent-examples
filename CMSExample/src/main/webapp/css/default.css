@@ -383,3 +383,21 @@ button[disabled=disabled] {
 #admin_panel li p {
 	display: none;
 }
+
+.rte {
+	height: 300px;
+	overflow: auto;
+}
+
+.rte li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+article img {
+	display: inline;
+}
+
+article img:after {
+	clear: both;
+}

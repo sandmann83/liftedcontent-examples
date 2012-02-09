@@ -6,9 +6,22 @@
 			<header>
 				<h1 data-lift-id="title">Page title</h1>
 			</header>
-			
-			<div data-lift="RichTextEditor"></div>
+
+			<div data-lift-id="editor">
+				<div data-lift="RichTextEditor"></div>
+				<hr/>
+			</div>
+
 			<div data-lift-id="content">Some text</div>
+
+			<div data-lift-id="editor">
+				<hr/>
+				<div data-lift="ImageRepository" class="rte">
+					<ul data-lift-id="items">
+						<li data-lift-id="item"><img /></li>
+					</ul>
+				</div>
+			</div>
 		</article>
 	</div>
 </body>

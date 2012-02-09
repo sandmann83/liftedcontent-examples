@@ -4,7 +4,7 @@ import com.github.siasia._
 import WebappPlugin.webappSettings
 import Keys._
     
-object WebBuild extends Build {
+object ExamplesBuild extends Build {
   val liftVersion = "2.4"
 
   lazy val container = Container("container")
