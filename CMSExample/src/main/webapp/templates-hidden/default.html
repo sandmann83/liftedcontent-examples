@@ -1,21 +1,17 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:lift="http://liftweb.net/">
+<html>
 <head>
 <meta charset="UTF-8" />
-<title class="lift:Menu.title"></title>
+<title data-lift="Menu.title"></title>
 <link rel="stylesheet" type="text/css" href="/css/default.css" />
 <link href="/classpath/blueprint/src/forms.css" type="text/css"
 	rel="stylesheet" media="screen, projection">
 <link href="/classpath/blueprint/print.css" type="text/css"
 	rel="stylesheet" media="print">
-
-<script src="/js/jquery.js"></script>
-<script id="json" src="/classpath/json.js"></script>
 </head>
 <body>
 	<header>
-		<hgroup class="lift:SetupInformation">
+		<hgroup data-lift="SetupInformation">
 			<h1 class="alt">
 				<span data-lift-id="title"></span> <img alt="" id="ajax-loader"
 					style="display: none;" src="/images/ajax-loader.gif" />
@@ -30,23 +26,22 @@
 		<div id="header_background"></div>
 
 		<nav>
-			<div class="lift:Menu.builder?group=secondary"></div>
+			<div data-lift="Menu.builder?group=secondary"></div>
 		</nav>
 	</header>
 
 	<section id="sidebar">
 		<section>
 			<nav>
-				<div class="lift:SiteMenu?group=primary"></div>
-								<hr />
-								<div data-lift="PagesMenu"></div>
+				<div data-lift="SiteMenu?group=primary"></div>
+				<div data-lift="PagesMenu"></div>
 			</nav>
 			<hr />
 		</section>
 
 		<section id="usermenu">
 			<nav>
-				<div class="lift:Menu.builder?group=user"></div>
+				<div data-lift="Menu.builder?group=user"></div>
 			</nav>
 		</section>
 
@@ -62,8 +57,8 @@
 	<div id="center_panel">
 		<a id="topOfThePage"></a>
 		<nav id="breadcrumb">
-			<span><span class="lift:Loc.YOU_ARE_HERE"></span></span>
-			<ul class="lift:Breadcrumb">
+			<span><span data-lift="Loc.YOU_ARE_HERE"></span></span>
+			<ul data-lift="Breadcrumb">
 				<li><a class="link" href="#">Link</a></li>
 			</ul>
 		</nav>
@@ -72,10 +67,10 @@
 		<hr style="clear: both" />
 		<footer>
 			<a id="toTheTop" href="#topOfThePage"><span
-				class="lift:Loc.TO_THE_TOP_OF_THE_PAGE"></span></a>
+				data-lift="Loc.TO_THE_TOP_OF_THE_PAGE"></span></a>
 
 			<div id="messages">
-				<div class="lift:Msgs"></div>
+				<div data-lift="Msgs"></div>
 			</div>
 		</footer>
 
@@ -91,10 +86,13 @@
 			&copy; 2011-2012 Stefan Bradl
 		</p>
 		<p>
-			Lift Version <span class="lift:VersionInfo.lift"></span> (<span
-				class="lift:VersionInfo.date"></span>)
+			Lift Version <span data-lift="VersionInfo.lift"></span> (<span
+				data-lift="VersionInfo.date"></span>)
 		</p>
 
 	</footer>
+
+	<script src="/js/jquery.js"></script>
+	<script id="json" src="/classpath/json.js"></script>
 </body>
 </html>

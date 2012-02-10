@@ -5,19 +5,12 @@
 </head>
 <body class="lift:content_id=main">
 	<div id="main" data-lift="TemplateSelector">
-		<div data-lift="LastError.show">
-			<h2>
-				<error:title />
-			</h2>
-			<p>
-				<error:message />
-			</p>
+		<div data-lift="LastError">
+			<h2 data-lift-id="title"></h2>
+			<p data-lift-id="message"></p>
 			<hr />
-			<p>
-				<error:stacktrace />
-			</p>
+			<p data-lift-id="stacktrace"></p>
 		</div>
 	</div>
 </body>
 </html>
-

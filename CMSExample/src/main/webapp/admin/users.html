@@ -11,31 +11,32 @@
 				</h1>
 			</header>
 
-			<form data-lift="Form.ajax">
-				<div data-lift="ListUsers">
-					<table>
-						<thead>
-							<tr>
-								<td><span data-lift="Loc.EMAIL"></span></td>
-								<td><span data-lift="Loc.FIRSTNAME"></span></td>
-								<td><span data-lift="Loc.LASTNAME"></span></td>
-								<td><span data-lift="Loc.ACTIVE"></span>?</td>
-								<td></td>
+			<div data-lift="LazyLoad">
+				<form data-lift="Form.ajax">
+					<div data-lift="ListUsers">
+						<table>
+							<thead>
+								<tr>
+									<td><span data-lift="Loc.EMAIL"></span></td>
+									<td><span data-lift="Loc.FIRSTNAME"></span></td>
+									<td><span data-lift="Loc.LASTNAME"></span></td>
+									<td><span data-lift="Loc.ACTIVE"></span>?</td>
+									<td></td>
+								</tr>
+							</thead>
+							<tr data-lift-id="userdata">
+								<td data-lift-id="email">Email</td>
+								<td data-lift-id="firstname">Firstname</td>
+								<td data-lift-id="lastname">Lastname</td>
+								<td data-lift-id="status">Status</td>
+								<td><a data-lift-id="roles"><img
+										src="/images/backend/manage_groups.png" /></a> <a
+									data-lift-id="delete"><img src="/images/delete.png" /></a></td>
 							</tr>
-						</thead>
-						<tr data-lift-id="userdata">
-							<td data-lift-id="email">Email</td>
-							<td data-lift-id="firstname">Firstname</td>
-							<td data-lift-id="lastname">Lastname</td>
-							<td data-lift-id="status">Status</td>
-							<td>
-								<a data-lift-id="roles"><img src="/images/backend/manage_groups.png" /></a>
-								<a data-lift-id="delete"><img src="/images/delete.png" /></a>
-							</td>
-						</tr>
-					</table>
-				</div>
-			</form>
+						</table>
+					</div>
+				</form>
+			</div>
 		</article>
 	</div>
 </body>
