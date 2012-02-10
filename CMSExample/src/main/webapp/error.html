@@ -4,12 +4,11 @@
 <meta charset="UTF-8" />
 </head>
 <body class="lift:content_id=main">
-	<div id="main" class="lift:surround?with=error;at=content">
-		<h2>Booting failed</h2>
-		<div class="lift:LastError.show">
-			<h3>
+	<div id="main" data-lift="TemplateSelector">
+		<div data-lift="LastError.show">
+			<h2>
 				<error:title />
-			</h3>
+			</h2>
 			<p>
 				<error:message />
 			</p>
