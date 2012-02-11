@@ -8,7 +8,7 @@ import net.liftweb.common.Empty
 import de.sbradl.liftedcontent.blog.BlogModule
 
 class Boot extends de.sbradl.liftedcontent.core.Boot {
-  
+
   override def modules = (new BlogModule) :: super.modules 
 
   override def boot {
