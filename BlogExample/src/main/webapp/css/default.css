@@ -3,10 +3,45 @@ article {
 	margin-bottom: 0px;
 }
 
-#lift__noticesContainer__ {
+#messages {
+	padding: 1em 1em 1em 2em;
+	text-align: left;
 	position: fixed;
 	bottom: 0%;
+	left: 0;
+	width: 100%;
+	
+	border: 1px solid #efefef;
+	background-color: #cccccc;
+	box-shadow: 0px 0px 15px #666;
+}
+
+#messages ul {
 	padding: 0px;
 	margin: 0px;
+}
+
+#messages li {
+	list-style-type: none;
+	vertical-align: top;
+	font-size: 14px;
+}
+
+#messages li:before {
+	padding-right: 8px;
+	margin: 0px;
+	
+}
+
+#lift__noticesContainer___notice li:before {
+	content: url(/images/messagebox_info.png); 
+}
+
+#lift__noticesContainer___warning li:before {
+	content: url(/images/messagebox_warning.png); 
+}
+
+#lift__noticesContainer___error li:before {
+	content: url(/images/messagebox_critical.png); 
 }
 

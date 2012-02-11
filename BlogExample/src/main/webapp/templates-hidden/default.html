@@ -53,9 +53,9 @@ body {
 					<form data-lift="Form.ajax?class=navbar-search pull-right">
 						<div data-lift="SearchBlogPost">
 							<div data-lift-id="datalist"></div>
-							<input name="search"
-								class="search-query" type="search"></input>
-							<button type="submit" class="btn btn-small btn-primary" style="position: relative; top: -3px">
+							<input name="search" class="search-query" type="search"></input>
+							<button type="submit" class="btn btn-small btn-primary"
+								style="position: relative; top: -3px">
 								<i class="icon-search icon-white"></i>
 							</button>
 						</div>
@@ -122,7 +122,10 @@ body {
 		<footer>
 			<p>&copy; Stefan Bradl 2012</p>
 
-			<div data-lift="Msgs"></div>
+			<div id="messages">
+				<div data-lift="Msgs"></div>
+			</div>
+
 		</footer>
 
 	</div>
