@@ -4,18 +4,17 @@
 	<div id="main" data-lift="TemplateSelector">
 		<article data-lift="Page">
 			<header>
+				<div data-lift-id="editor">
+					<div data-lift="RichTextEditor"></div>
+				</div>
+
 				<h1 data-lift-id="title">Page title</h1>
 			</header>
-
-			<div data-lift-id="editor">
-				<div data-lift="RichTextEditor"></div>
-				<hr/>
-			</div>
 
 			<div data-lift-id="content">Some text</div>
 
 			<div data-lift-id="editor">
-				<hr/>
+				<hr />
 				<div data-lift="ImageRepository" class="rte">
 					<ul data-lift-id="items">
 						<li data-lift-id="item"><img /></li>
