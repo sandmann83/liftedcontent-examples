@@ -386,6 +386,15 @@ article img {
 	display: inline;
 }
 
+[data-lift-id="content"] img {
+	float: left;
+	margin: 8px;
+}
+
 article img:after {
 	clear: both;
+}
+
+.draggable {
+	cursor: move;
 }

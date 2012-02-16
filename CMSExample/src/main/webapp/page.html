@@ -11,17 +11,37 @@
 				<h1 data-lift-id="title">Page title</h1>
 			</header>
 
-			<div data-lift-id="content">Some text</div>
+			<textarea data-lift-id="content">Some text</textarea>
 
 			<div data-lift-id="editor">
 				<hr />
 				<div data-lift="ImageRepository" class="rte">
 					<ul data-lift-id="items">
-						<li data-lift-id="item"><img /></li>
+						<li data-lift-id="item"><img class="draggable"
+							style="width: 32px" /></li>
 					</ul>
 				</div>
 			</div>
 		</article>
+
+		<script language="javascript">
+			function handleDragStart(event) {
+				var img = this.cloneNode();
+				img.style.removeProperty('width');
+
+				event.dataTransfer.setData('text/html', '<img src="' + img.src + '" />');
+// 				event.dataTransfer.setData('Text', '!' + img.src + '(ALT)!');
+				event.dataTransfer.effectAllowed = 'copy';
+				event.dataTransfer.dropEffect = 'copy';
+
+				return true;
+			}
+
+			var cols = document.querySelectorAll('[data-lift-id="item"] img');
+			[].forEach.call(cols, function(col) {
+				col.addEventListener('dragstart', handleDragStart, false);
+			});
+		</script>
 	</div>
 </body>
 </html>
