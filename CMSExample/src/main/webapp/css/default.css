@@ -382,17 +382,24 @@ button[disabled=disabled] {
 	display: inline-block;
 }
 
+.rte img {
+	margin: 8px;
+}
+
+.rte img:hover {
+	box-shadow: 0px 0px 3px #000000;
+}
+
 article img {
 	display: inline;
 }
 
-[data-lift-id="content"] img {
-	float: left;
-	margin: 8px;
-}
-
 article img:after {
 	clear: both;
+}
+
+article p img {
+	max-width: 100%;
 }
 
 .draggable {

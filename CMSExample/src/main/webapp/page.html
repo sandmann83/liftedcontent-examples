@@ -5,20 +5,21 @@
 		<article data-lift="Page">
 			<header>
 				<div data-lift-id="editor">
-					<div data-lift="RichTextEditor"></div>
+					<div data-lift="RichTextEditor.textile"></div>
 				</div>
 
 				<h1 data-lift-id="title">Page title</h1>
 			</header>
 
-			<textarea data-lift-id="content">Some text</textarea>
+			<textarea data-lift-id="content" data-lift="TestCondition.isAdmin">Some text</textarea>
+			<p data-lift-id="content" data-lift="TestCondition.notAdmin">Some text</p>
 
 			<div data-lift-id="editor">
 				<hr />
 				<div data-lift="ImageRepository" class="rte">
 					<ul data-lift-id="items">
 						<li data-lift-id="item"><img class="draggable"
-							style="width: 32px" /></li>
+							style="width: 64px" /></li>
 					</ul>
 				</div>
 			</div>
@@ -41,7 +42,7 @@
 			[].forEach.call(cols, function(col) {
 				col.addEventListener('dragstart', handleDragStart, false);
 			});
-		</script>
+ 		</script>
 	</div>
 </body>
 </html>
