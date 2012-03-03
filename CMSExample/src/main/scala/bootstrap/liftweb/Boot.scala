@@ -6,7 +6,7 @@ import net.liftweb.common.Full
 import net.liftweb.util.Helpers._
 import net.liftweb.common.Empty
 
-class Boot extends de.sbradl.liftedcontent.core.Boot {
+class Boot extends eu.sbradl.liftedcontent.core.Boot {
 
   override def boot {
     super.boot

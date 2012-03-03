@@ -392,6 +392,7 @@ button[disabled=disabled] {
 
 article img {
 	display: inline;
+	margin: 0.5em;
 }
 
 article img:after {
@@ -404,4 +405,8 @@ article p img {
 
 .draggable {
 	cursor: move;
+}
+
+blockquote {
+	border-left: 3px solid #cccccc;
 }

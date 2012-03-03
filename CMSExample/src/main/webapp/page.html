@@ -28,17 +28,15 @@
 					</ul>
 				</div>
 			</div>
-
 		</article>
-
+		
 		<script language="javascript">
 			function handleDragStart(event) {
 				var img = this.cloneNode();
 				img.style.removeProperty('width');
 
-				event.dataTransfer.setData('text/html',
-						'<img src="' + img.src + '" />');
-				// 				event.dataTransfer.setData('Text', '!' + img.src + '(ALT)!');
+				//event.dataTransfer.setData('text/html', '<img src="' + img.src + '" />');
+				event.dataTransfer.setData('Text', '!' + img.src + '(ALT)!');
 				event.dataTransfer.effectAllowed = 'copy';
 				event.dataTransfer.dropEffect = 'copy';
 
