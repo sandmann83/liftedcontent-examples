@@ -2,52 +2,10 @@
 <html>
 <body class="lift:content_id=main">
 	<div id="main" data-lift="TemplateSelector">
-		<article data-lift="Page">
-			<header>
-				<div data-lift-id="editor">
-					<div data-lift="RichTextEditor.textile"></div>
-				</div>
-
-				<h1 data-lift-id="title">Page title</h1>
-			</header>
-
-			<textarea data-lift-id="content" data-lift="TestCondition.isAdmin">Some text</textarea>
-			<p data-lift-id="content" data-lift="TestCondition.notAdmin">Some
-				text</p>
-
-			<button data-lift="TestCondition.isAdmin" type="button" data-lift-id="save">
-				<span data-lift="Loc.i">SAVE</span>
-			</button>
-
-			<div data-lift-id="editor">
-				<hr />
-				<div data-lift="ImageRepository" class="rte">
-					<ul data-lift-id="items">
-						<li data-lift-id="item"><img class="draggable"
-							style="width: 64px" /></li>
-					</ul>
-				</div>
-			</div>
-		</article>
-		
-		<script language="javascript">
-			function handleDragStart(event) {
-				var img = this.cloneNode();
-				img.style.removeProperty('width');
-
-				//event.dataTransfer.setData('text/html', '<img src="' + img.src + '" />');
-				event.dataTransfer.setData('Text', '!' + img.src + '(ALT)!');
-				event.dataTransfer.effectAllowed = 'copy';
-				event.dataTransfer.dropEffect = 'copy';
-
-				return true;
-			}
-
-			var cols = document.querySelectorAll('[data-lift-id="item"] img');
-			[].forEach.call(cols, function(col) {
-				col.addEventListener('dragstart', handleDragStart, false);
-			});
-		</script>
+		<div data-lift="TestCondition.isAdmin">
+			<div data-lift="RichTextEditor"></div>
+		</div>
+		<div data-lift="PageTemplateSelector"></div>
 	</div>
 </body>
 </html>
